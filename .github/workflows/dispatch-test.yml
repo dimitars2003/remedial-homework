@@ -6,7 +6,7 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     env:
-      tests_repo: https://github.com/fmi-si/tests-homework-4
+      tests_repo: https://github.com/fmi-si/tests-remedial-homework
     steps:
       - uses: actions/checkout@v2
 
