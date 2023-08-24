@@ -20,56 +20,82 @@ void letterOutput(char symbol){
     switch (symbol) {
     case 'a':
         cout <<  ".-";
+        break;
     case 'b':
         cout <<  "-...";
+        break;
     case 'c':
         cout <<  "-.-.";
+        break;
     case 'd':
         cout <<  "-..";
+        break;
     case 'e':
         cout <<  ".";
+        break;
     case 'f':
         cout <<  "..-.";
+        break;
     case 'g':
         cout <<  "--.";
+        break;
     case 'h':
         cout <<  "....";
+        break;
     case 'i':
         cout <<  "..";
+        break;
     case 'j':
         cout <<  ".---";
+        break;
     case 'k':
         cout <<  "-.-";
+        break;
     case 'l':
         cout <<  ".-..";
+        break;
     case 'm':
         cout <<  "--";
+        break;
     case 'n':
         cout <<  "-.";
+        break;
     case 'o':
         cout <<  "---";
+        break;
     case 'p':
         cout <<  ".--.";
+        break;
     case 'q':
         cout <<  "--.-";
+        break;
     case 'r':
         cout <<  ".-.";
+        break;
     case 's':
         cout <<  "...";
+        break;
     case 't':
         cout <<  "-";
+        break;
     case 'u':
         cout <<  "..-";
+        break;
     case 'v':
         cout << "...-";
+        break;
     case 'w':
         cout <<  ".--";
+        break;
     case 'x':
         cout <<  "-..-";
+        break;
     case 'y':
         cout <<  "-.--";
+        break;
     case 'z':
         cout << "--..";
+        break;
     }
 }
 void numberOutput(char symbol){
@@ -98,10 +124,9 @@ void numberOutput(char symbol){
 }
 int main (){
     char* symbols = new char;
-    cin >> symbols;
-    cout << symbols;
+    cin.get(symbols, 100);
 
-    for(int i = 0; i < sizeof(symbols);i++){
+    for(int i = 0; i < sizeof(symbols)-1;i++){
         if(symbols[i]<='Z'&&symbols[i]>='A'){
             letterOutput(symbols[i]+32);
         }
@@ -116,6 +141,7 @@ int main (){
             cout << "Incorrect input";
             return 0;
         }
+        cout << " ";
     }
     delete symbols;
     return 0;
