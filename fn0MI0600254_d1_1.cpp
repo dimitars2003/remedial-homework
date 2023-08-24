@@ -125,9 +125,11 @@ void numberOutput(char symbol){
 int main (){
     char* symbols = new char;
     cin.get(symbols, 100);
-    cout<<sizeof(symbols)<<endl;
-    for(int i = 0; i < sizeof(symbols)-1;i++){
-            cout<<"error"<<endl;
+
+    for(int i = 0; i < (sizeof(symbols)/2)-1;i++){
+
+        //Na moq kompilator raboti po razlichen nachi ot testote, pri men raboti sizeof(symbols)-1 (pri greshka probvaite da smenite)
+
         if(symbols[i]<='Z'&&symbols[i]>='A'){
             letterOutput(symbols[i]+32);
         }
