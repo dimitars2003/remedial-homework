@@ -22,7 +22,7 @@ int numberOfOnesInBinary(int number){
     if(number%2==0){
         return numberOfOnesInBinary(number/2);
     }
-    if(number%2==1){
+    else{
 
         return 1+numberOfOnesInBinary(number/2);
     }

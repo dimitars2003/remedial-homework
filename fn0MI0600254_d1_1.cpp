@@ -17,7 +17,7 @@ using namespace std;
 
 
 void letterOutput(char symbol){
-    switch (x) {
+    switch (symbol) {
     case 'a':
         cout <<  ".-";
     case 'b':
@@ -100,10 +100,10 @@ int main (){
     char* symbols = new char;
     cin >> symbols;
     cout << symbols;
-    delete symbols;
-    for(int i = 0; i < strlen(symbols);i++){
+
+    for(int i = 0; i < sizeof(symbols);i++){
         if(symbols[i]<='Z'&&symbols[i]>='A'){
-            letterOutput(symbols[i]+32)
+            letterOutput(symbols[i]+32);
         }
         else if(symbols[i]<='z'&&symbols[i]>='a'){
             letterOutput(symbols[i]);
@@ -117,5 +117,6 @@ int main (){
             return 0;
         }
     }
+    delete symbols;
     return 0;
 }

@@ -19,22 +19,23 @@ int numberLengthDecimal(int temp){
     if(temp == 4 || temp == 5 || temp == 6){
         return 5;
     }
-    if(temp == 2 || temp == 3 || temp == 8 || temp == 9){
+    else if(temp == 2 || temp == 3 || temp == 8 || temp == 9){
         return 6;
     }
-    if(temp == 7 ){
+    else{
         return 7;
     }
+
 }
 
 int numberLength(int temp){
     if(temp == 1 || temp == 2 || temp == 6){
         return 3;
     }
-    if(temp == 4 || temp == 5 || temp == 9){
+    else if(temp == 4 || temp == 5 || temp == 9){
         return 4;
     }
-    if(temp == 3 || temp == 7 || temp == 8){
+    else{
         return 5;
     }
 }
