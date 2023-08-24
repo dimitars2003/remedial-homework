@@ -127,6 +127,7 @@ int main (){
     cin.get(symbols, 100);
 
     for(int i = 0; i < sizeof(symbols)-1;i++){
+            cout<<"error"<<endl;
         if(symbols[i]<='Z'&&symbols[i]>='A'){
             letterOutput(symbols[i]+32);
         }
