@@ -125,7 +125,7 @@ void numberOutput(char symbol){
 int main (){
     char* symbols = new char;
     cin.get(symbols, 100);
-
+    cout<<sizeof(symbols)<<endl;
     for(int i = 0; i < sizeof(symbols)-1;i++){
             cout<<"error"<<endl;
         if(symbols[i]<='Z'&&symbols[i]>='A'){
